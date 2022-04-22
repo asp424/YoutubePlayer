@@ -8,7 +8,7 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 @Module(
     includes = [
         PlayerInitializerModule::class,
-        ResourcesProviderModule::class,
+        ResourcesModule::class,
         RepositoryModule::class,
         HandlerModule::class,
         RetrofitProviderModule::class

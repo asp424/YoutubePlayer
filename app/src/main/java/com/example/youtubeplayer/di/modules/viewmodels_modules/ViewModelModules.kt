@@ -1,7 +1,7 @@
 package com.example.youtubeplayer.di.modules.viewmodels_modules
 
 import androidx.lifecycle.ViewModel
-import com.example.youtubeplayer.presentation.viewmodels.YoutubeViewModel
+import com.example.youtubeplayer.viewmodels.YoutubeViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

@@ -1,7 +1,7 @@
 package com.example.youtubeplayer.di.modules.viewmodels_modules
 
 import androidx.lifecycle.ViewModelProvider
-import com.example.youtubeplayer.presentation.viewmodels.ViewModelFactory
+import com.example.youtubeplayer.viewmodels.ViewModelFactory
 import dagger.Binds
 import dagger.Module
 import kotlinx.coroutines.ExperimentalCoroutinesApi

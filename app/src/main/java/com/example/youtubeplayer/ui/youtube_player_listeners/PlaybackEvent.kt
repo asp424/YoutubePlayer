@@ -1,4 +1,4 @@
-package com.example.youtubeplayer.youtubeplayerlisteners
+package com.example.youtubeplayer.ui.youtube_player_listeners
 
 import com.google.android.youtube.player.YouTubePlayer
 

@@ -7,12 +7,12 @@ import com.google.android.youtube.player.YouTubeBaseActivity
 
 abstract class BaseActivity : YouTubeBaseActivity() {
 
-    protected val key by lazy { getString(R.string.GOOGLE_API_KEY) }
+    protected val key by lazy { getString(R.string.key) }
 
     protected val view by lazy { PlayerBinding.inflate(layoutInflater).root }
 
     protected val dagger by lazy {
-        appComponent.errorDialog(YR.SERVICE_MISSING.getErrorDialog(this, 0)).activity(this).create() }
+        appComponent.errorDialog(YR.SERVICE_MISSING.getErrorDialog(this, 0)).create() }
 
     protected val playerInit by lazy { dagger.playerInit() }
 }

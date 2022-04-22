@@ -1,23 +1,26 @@
-package com.example.youtubeplayer
+package com.example.youtubeplayer.core
 
 import android.os.Bundle
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelStore
-import com.example.youtubeplayer.core.BaseActivity
 import com.example.youtubeplayer.data.youtube.Repository
-import com.example.youtubeplayer.presentation.viewmodels.ViewModelFactory
-import com.example.youtubeplayer.presentation.viewmodels.YoutubeViewModel
+import com.example.youtubeplayer.log
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.IO
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class YoutubeActivity : BaseActivity() {
+
+    @Inject
+    lateinit var repository: Repository
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(view.apply { initialize(key, playerInit) })
+        dagger.inject(this)
+        //CoroutineScope(IO).launch { repository.subscriptions().collect{
+            //it.log
+                // }
+        //}
     }
 }
 

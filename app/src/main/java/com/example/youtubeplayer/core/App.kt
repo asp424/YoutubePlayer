@@ -5,6 +5,6 @@ import com.example.youtubeplayer.di.AppComponent
 import com.example.youtubeplayer.di.DaggerAppComponent
 
 class App : Application() {
-    val appComponent: AppComponent.Builder by lazy { DaggerAppComponent.builder() }
+    val appComponent: AppComponent.Builder by lazy { DaggerAppComponent.builder().application(this) }
 }
 

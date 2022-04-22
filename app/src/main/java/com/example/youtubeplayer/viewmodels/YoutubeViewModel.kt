@@ -1,4 +1,4 @@
-package com.example.youtubeplayer.presentation.viewmodels
+package com.example.youtubeplayer.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

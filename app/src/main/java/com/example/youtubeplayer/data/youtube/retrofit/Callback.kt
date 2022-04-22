@@ -1,6 +1,5 @@
 package com.example.youtubeplayer.data.youtube.retrofit
 
-import com.example.youtubeplayer.log
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -11,8 +10,6 @@ object Callback {
             override fun onResponse(call: Call<T>, response: Response<T>) {
                 if (response.isSuccessful) onResult(ApiResponse.Success(response))
                 else onResult(ApiResponse.Failure(response))
-              response.code().log
-
             }
 
             override fun onFailure(call: Call<T>, throwable: Throwable) {

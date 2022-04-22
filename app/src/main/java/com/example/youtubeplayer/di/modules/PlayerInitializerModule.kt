@@ -1,8 +1,7 @@
 package com.example.youtubeplayer.di.modules
 
 import android.app.Dialog
-import com.example.youtubeplayer.youtubeplayerlisteners.PlayerInitialize
-import com.google.android.youtube.player.YouTubeInitializationResult
+import com.example.youtubeplayer.ui.youtube_player_listeners.PlayerInitialize
 import dagger.Module
 import dagger.Provides
 
