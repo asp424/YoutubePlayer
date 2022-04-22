@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">YoutubePlayer</string>
-    <string name="youtubeUrl">https://www.googleapis.com/youtube/v3/</string>
+    <string name="youtubeUrl">https://youtube.googleapis.com/youtube/v3/</string>
 </resources>

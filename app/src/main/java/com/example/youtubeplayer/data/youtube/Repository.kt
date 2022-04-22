@@ -13,6 +13,6 @@ interface Repository {
         private val handler: Handler,
         private val rP: RetrofitProvider
     ) : Repository {
-        override fun subscriptions() = handler.task(rP.youtubeDataApi.fetchData("subscriptions"))
+        override fun subscriptions() = handler.task(rP.youtubeDataApi.fetchData("subscriptions?part=snippet%2CcontentDetails&mine=true&key=AIzaSyD_C0tLoN1DgDigXFyo3E2j_p6ZxeVhtCk"))
     }
 }

@@ -11,7 +11,8 @@ abstract class BaseActivity : YouTubeBaseActivity() {
 
     protected val view by lazy { PlayerBinding.inflate(layoutInflater).root }
 
-    protected val playerInit by lazy {
-        appComponent.errorDialog(YR.SERVICE_MISSING.getErrorDialog(this, 0)).create().playerInit()
-    }
+    protected val dagger by lazy {
+        appComponent.errorDialog(YR.SERVICE_MISSING.getErrorDialog(this, 0)).activity(this).create() }
+
+    protected val playerInit by lazy { dagger.playerInit() }
 }

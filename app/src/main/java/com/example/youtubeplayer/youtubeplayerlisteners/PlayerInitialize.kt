@@ -15,7 +15,7 @@ class PlayerInitialize(private val errorDialog: Dialog):
             setPlayerStateChangeListener(PlayerStateChange)
             setPlaybackEventListener(PlaybackEvent)
             setOnFullscreenListener(PlayerFullscreen)
-            loadPlaylist(PLAYLIST)
+            cuePlaylist(PLAYLIST)
         }
     }
 

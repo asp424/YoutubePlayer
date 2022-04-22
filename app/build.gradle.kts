@@ -27,9 +27,8 @@ android {
             freeCompilerArgs = listOf("-Xjvm-default=all", "-opt-in=kotlin.RequiresOptIn")
         }
 
-        buildFeatures { compose = true; viewBinding = true }
+        buildFeatures { viewBinding = true }
 
-        composeOptions { kotlinCompilerExtensionVersion = composeVersion }
         packagingOptions { resources { excludes += "/META-INF/{AL2.0,LGPL2.1}" } }
     }
 }
@@ -39,12 +38,5 @@ repositories{ myRepository() }
 dependencies {
     implementation (files("libs\\YouTubeAndroidPlayerApi.jar"))
     impl() }
-
-
-repositories { myRepository() }
-
-dependencies {
-    impl()
-}
 
 
