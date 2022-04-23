@@ -6,15 +6,14 @@ import com.example.youtubeplayer.core.YPP
 import com.example.youtubeplayer.core.YR
 import com.google.android.youtube.player.YouTubePlayer
 
-class PlayerInitialize(private val errorDialog: Dialog):
-    YouTubePlayer.OnInitializedListener {
+class PlayerInitialize(private val errorDialog: Dialog) : YouTubePlayer.OnInitializedListener {
 
     override fun onInitializationSuccess(provider: YPP, player: YP, wasRestored: Boolean) {
         player.apply {
             setPlayerStateChangeListener(PlayerStateChange)
             setPlaybackEventListener(PlaybackEvent)
             setOnFullscreenListener(PlayerFullscreen)
-            loadPlaylist(PLAYLIST)
+            cuePlaylist(PLAYLIST)
         }
     }
 
@@ -23,9 +22,9 @@ class PlayerInitialize(private val errorDialog: Dialog):
     }
 
     companion object {
-        const val ID = "Ae-6j8W8Vys"
-        const val PLAYLIST = "PLeIdlMruOHymIp9uIgd_myXDljpflTK89"
-        const val channel = "UCww8QI2ax2jj1a2gnxjV5Sg"
+        private const val ID = "Ae-6j8W8Vys"
+        private const val PLAYLIST = "PLeIdlMruOHymIp9uIgd_myXDljpflTK89"
+        private const val channel = "UCww8QI2ax2jj1a2gnxjV5Sg"
     }
 }
 

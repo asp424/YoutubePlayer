@@ -1,42 +1,30 @@
 
-plugins { listPlugins.forEach { id(it) }  }
-
+plugins { pluginsList.forEach { id(it) } }
+dependencies { implementations(files(localPath)) }
 android {
     compileSdk = 31
     defaultConfig {
-        applicationId = "com.example.youtubeplayer"; minSdk = 26; targetSdk = 31; versionCode = 1
-        versionName = "1.0"
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        applicationId = appId
+        minSdk = 26
+        targetSdk = 31
+        versionCode = 1
+        versionName = appVersion
+        testInstrumentationRunner = testRunner
         vectorDrawables { useSupportLibrary = true }
         buildTypes {
             release {
                 isMinifyEnabled = false
-                proguardFiles(
-                    getDefaultProguardFile("proguard-android-optimize.txt"),
-                    "proguard-rules.pro"
-                )
+                proguardFiles(getDefaultProguardFile(proGName), proGRules)
             }
         }
-
-        compileOptions {
-            with(JavaVersion.VERSION_11) { sourceCompatibility = this; targetCompatibility = this }
-        }
-
-        kotlinOptions {
-            jvmTarget = "11"
-            freeCompilerArgs = listOf("-Xjvm-default=all", "-opt-in=kotlin.RequiresOptIn")
-        }
-
+        compileOptions { sourceCompatibility = javaVersion; targetCompatibility = javaVersion }
+        kotlinOptions { jvmTarget = jvm; freeCompilerArgs = argsList }
         buildFeatures { viewBinding = true }
-
-        packagingOptions { resources { excludes += "/META-INF/{AL2.0,LGPL2.1}" } }
+        packagingOptions { resources { excludes += res } }
     }
 }
 
-repositories{ myRepository() }
 
-dependencies {
-    implementation (files("libs\\YouTubeAndroidPlayerApi.jar"))
-    impl() }
+
 
 

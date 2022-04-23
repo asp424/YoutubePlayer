@@ -6,7 +6,6 @@ import com.google.android.youtube.player.YouTubePlayer
 import com.google.gson.JsonObject
 import kotlinx.coroutines.flow.Flow
 
-
 typealias YPP = YouTubePlayer.Provider
 typealias YP = YouTubePlayer
 typealias YR = YouTubeInitializationResult

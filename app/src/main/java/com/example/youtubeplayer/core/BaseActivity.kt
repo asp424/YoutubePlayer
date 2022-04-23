@@ -9,10 +9,11 @@ abstract class BaseActivity : YouTubeBaseActivity() {
 
     protected val key by lazy { getString(R.string.key) }
 
-    protected val view by lazy { PlayerBinding.inflate(layoutInflater).root }
+    protected val playerView by lazy { PlayerBinding.inflate(layoutInflater).root }
 
     protected val dagger by lazy {
-        appComponent.errorDialog(YR.SERVICE_MISSING.getErrorDialog(this, 0)).create() }
+        appComponent.errorDialog(YR.SERVICE_MISSING.getErrorDialog(this, 0)).create()
+    }
 
     protected val playerInit by lazy { dagger.playerInit() }
 }
